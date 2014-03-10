@@ -1,0 +1,39 @@
+.sp-input {
+background-color: rgba(255,255,255,0.3);
+height: 30px;
+padding: 20px;
+border-radius: 10px;
+margin: 0 auto;
+width: 20px;
+}
+.sp-input input[type="text"] {
+width: 210px;
+padding: 6px;
+background-color: #fff;
+border: 1px solid #ddd;
+border-radius: 4px;
+float: left;
+font-family: 'Cookie', serif;
+font-size: 18px;
+}
+.sp-input input[type="text"]:focus {
+outline-color: #acdacf;
+}
+.sp-input a {
+float: left;
+background-color: #418e7b;
+color: #fff;
+width: 60px;
+height: 30px;
+border: none;
+border-radius: 50%;
+margin-left: 5px;
+text-align: center;
+line-height: 30px;
+cursor: pointer;
+font-family: Arial, sans-serif;
+}
+.sp-input a:hover {
+background-color: #fff;
+color: #418e7b;
+}
