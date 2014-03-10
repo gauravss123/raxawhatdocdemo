@@ -1,10 +1,11 @@
 <html>
 <head>
 </head>
+Note the order of abbreviations displayed as input query may be different from the ones entered by you<br>
+match the color of abbreviations with text for their meaning<br>
 <?php 
-//med qpm qh ivp 8,med qam 43 qhs iv
 $freq=array("qam","qds","qpm","qh","qhs");
-$rout=array("iv","ivp","op");
+$rout=array("iv","ivp","po");
 $freq1=array("every day before noon","four times a day","every day after noon or every evening","every hour","every night at bedtime","unknown");
 $rout1=array("via intravenous route ","via intravenous push "," by mouth ","unknown");
 $pres=$_POST["i"];
@@ -33,17 +34,14 @@ function resultify($pressc11,&$result){
   $result="Take ".$pressc2[0]." ";
   $ind=array();
   $indw=array();
-  $pressc2=preg_replace("/\./","",$pressc2);
+  $pressc2=preg_replace("/\./","",$pressc2);//to handle dots in abbreviations
   $notFound=array();
   $num;
   for($x=1;$x<sizeof($pressc2);$x++){
-      $freqstat=in_array($pressc2[$x],$freq);
-      $routstat=in_array($pressc2[$x],$rout);
       
-      
-      if($freqstat)
+      if(in_array($pressc2[$x],$freq))
 	array_push($ind,array_search($pressc2[$x],$freq));
-      else if($routstat)
+      else if(in_array($pressc2[$x],$rout))
 	array_push($indw,array_search($pressc2[$x],$rout));
       else if(is_numeric($pressc2[$x]))
 	$num=$pressc2[$x];
@@ -59,7 +57,7 @@ function resultify($pressc11,&$result){
     }
   for($x=0;$x<sizeof($indw);$x++){
     $b += ($c*(sizeof($ind)));
-    $query .= " <font color='$b'>".$rout[$ind[$x]]."</font>, ";
+    $query .= " <font color='$b'>".$rout[$indw[$x]]."</font>, ";
     $result.= " <font color='$b'>".$rout1[$indw[$x]]."</font>, ";
     }
   $b += ($c*(sizeof($indw)+sizeof($ind)));
