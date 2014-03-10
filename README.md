@@ -22,3 +22,8 @@ Separate multiple prescriptions using commas<br>
 with each starting with the medicine name having one or more than 1 abbreviations and a number to indicate days for repeating medicine<br>
 each prescription should start with medicine name the order of abbreviations or number doesn't matter<br>
 abbreviations may have "." after each character<br>
+
+FOR result.php
+Note the order of abbreviations displayed as input query may be different from the ones entered by you<br>
+match the color of abbreviations with text for their meaning<br><br>
+

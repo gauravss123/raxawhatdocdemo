@@ -24,7 +24,7 @@ each prescription should start with medicine name the order of abbreviations or 
 abbreviations may have "." after each character<br><br>
 <div class="sp-input">
 <form method="post" action="result.php" name = "m">
-<input type="text" name="i">
+<input type="text" name="i" value="med q.a.m 8 iv , med2 qhs ert sfr 8 po">
 <a href="javascript:document.m.submit();">Submit</a>
 
 </div>
