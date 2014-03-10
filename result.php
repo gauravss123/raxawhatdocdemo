@@ -2,7 +2,7 @@
 <head>
 </head>
 Note the order of abbreviations displayed as input query may be different from the ones entered by you<br>
-match the color of abbreviations with text for their meaning<br>
+match the color of abbreviations with text for their meaning<br><br>
 <?php 
 $freq=array("qam","qds","qpm","qh","qhs");
 $rout=array("iv","ivp","po");
@@ -77,6 +77,7 @@ function resultify($pressc11,&$result){
  }
 
 ?>
+<a href="input.php">Go back</a>
 <body>
 </body>
 </html>
